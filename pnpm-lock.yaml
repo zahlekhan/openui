@@ -131,17 +131,17 @@ importers:
         specifier: workspace:^
         version: link:../packages/lang-core
       '@openuidev/react-headless':
-        specifier: workspace:^
-        version: link:../packages/react-headless
+        specifier: 0.9.4
+        version: 0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))
       '@openuidev/react-lang':
         specifier: workspace:^
         version: link:../packages/react-lang
       '@openuidev/react-ui':
-        specifier: workspace:^
-        version: link:../packages/react-ui
+        specifier: 0.13.3
+        version: 0.13.3(@openuidev/react-headless@0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4)))(@openuidev/react-lang@packages+react-lang)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.4.3)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))
       '@openuidev/thesys':
         specifier: 0.3.1
-        version: 0.3.1(@openuidev/lang-core@packages+lang-core)(@openuidev/react-headless@packages+react-headless)(@openuidev/react-lang@packages+react-lang)(@openuidev/react-ui@packages+react-ui)(@radix-ui/react-tooltip@1.2.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(@tiptap/core@2.27.2(@tiptap/pm@2.27.2))(@tiptap/pm@2.27.2)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.4.3)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))
+        version: 0.3.1(@openuidev/lang-core@packages+lang-core)(@openuidev/react-headless@0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4)))(@openuidev/react-lang@packages+react-lang)(@openuidev/react-ui@0.13.3(@openuidev/react-headless@0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4)))(@openuidev/react-lang@packages+react-lang)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.4.3)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4)))(@radix-ui/react-tooltip@1.2.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(@tiptap/core@2.27.2(@tiptap/pm@2.27.2))(@tiptap/pm@2.27.2)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.4.3)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))
       '@openuidev/thesys-server':
         specifier: 0.1.3
         version: 0.1.3
@@ -1791,7 +1791,7 @@ importers:
         version: 1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1)
       '@langchain/langgraph':
         specifier: ^1.4.5
-        version: 1.4.8(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(svelte@5.56.8(@typescript-eslint/types@8.65.0))(vue@3.5.40(typescript@5.9.3))(zod@4.4.3)
+        version: 1.4.8(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1))(react@19.2.4)(svelte@5.56.8(@typescript-eslint/types@8.65.0))(vue@3.5.40(typescript@5.9.3))(zod@4.4.3)
       '@langchain/protocol':
         specifier: ^0.0.18
         version: 0.0.18
@@ -5620,6 +5620,15 @@ packages:
       '@modelcontextprotocol/sdk':
         optional: true
 
+  '@openuidev/observability@0.0.1':
+    resolution: {integrity: sha512-OIlRQbVqTBpre3MMzaeNB3USDaigUaSZyPcAIVSLNpqcosGgJijUS2nXjDVRRnZFsOu0gIOTVqd2G8lwcLSBPg==}
+
+  '@openuidev/react-headless@0.9.4':
+    resolution: {integrity: sha512-GCcvSJ8ZHY2yxyp2eCyYxP4zB4CmDvyVR/04DmXyGdIZJNTYJ/HAOU0xPI3wUYXO/3JT2UduPh0V4TM/GF7rCA==}
+    peerDependencies:
+      react: ^18.3.1 || ^19.0.0
+      zustand: ^4.5.5
+
   '@openuidev/react-lang@0.1.5':
     resolution: {integrity: sha512-5ulTIZzCM+sRaS0arLLVMINf7nZcUIlOqEFUgzWhd1diRCzGKVZ39u7e5QFmmpu08yz2uKX358ql6bW5vD2gcg==}
     peerDependencies:
@@ -5628,6 +5637,16 @@ packages:
     peerDependenciesMeta:
       '@modelcontextprotocol/sdk':
         optional: true
+
+  '@openuidev/react-ui@0.13.3':
+    resolution: {integrity: sha512-8BFGrBaTQravEmsUq3qfpl2j+qfAU2VV7J9FjdF0yof9t2GzquuqeAZBGcD+rH3kOafF0DKqdOL37x216hM0zg==}
+    peerDependencies:
+      '@openuidev/react-headless': ^0.9.4
+      '@openuidev/react-lang': ^0.2.9
+      react: ^18.3.1 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+      zod: ^3.25.0 || ^4.0.0
+      zustand: ^4.5.5
 
   '@openuidev/thesys-server@0.1.3':
     resolution: {integrity: sha512-hIa1jvw4K7V97Z5drtk7pI0qmo2E/uLzm/buZzSTF/R9+JcKEdiD3JR9+KriIEdLNGa+1H3QsNNES+yQSQ3YwA==}
@@ -21982,7 +22001,7 @@ snapshots:
       svelte: 5.56.8(@typescript-eslint/types@8.65.0)
       vue: 3.5.40(typescript@5.9.3)
 
-  '@langchain/langgraph-sdk@1.9.28(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(svelte@5.56.8(@typescript-eslint/types@8.65.0))(vue@3.5.40(typescript@5.9.3))':
+  '@langchain/langgraph-sdk@1.9.28(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1))(react@19.2.4)(svelte@5.56.8(@typescript-eslint/types@8.65.0))(vue@3.5.40(typescript@5.9.3))':
     dependencies:
       '@langchain/core': 1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1)
       '@langchain/protocol': 0.0.18
@@ -21991,7 +22010,6 @@ snapshots:
       p-retry: 7.1.1
     optionalDependencies:
       react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
       svelte: 5.56.8(@typescript-eslint/types@8.65.0)
       vue: 3.5.40(typescript@5.9.3)
 
@@ -22017,11 +22035,11 @@ snapshots:
       - svelte
       - vue
 
-  '@langchain/langgraph@1.4.8(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(svelte@5.56.8(@typescript-eslint/types@8.65.0))(vue@3.5.40(typescript@5.9.3))(zod@4.4.3)':
+  '@langchain/langgraph@1.4.8(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1))(react@19.2.4)(svelte@5.56.8(@typescript-eslint/types@8.65.0))(vue@3.5.40(typescript@5.9.3))(zod@4.4.3)':
     dependencies:
       '@langchain/core': 1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1)
       '@langchain/langgraph-checkpoint': 1.1.3(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1))
-      '@langchain/langgraph-sdk': 1.9.28(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(svelte@5.56.8(@typescript-eslint/types@8.65.0))(vue@3.5.40(typescript@5.9.3))
+      '@langchain/langgraph-sdk': 1.9.28(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@6.49.0(@aws-sdk/credential-provider-node@3.972.73)(@smithy/signature-v4@5.6.11)(ws@8.21.1)(zod@4.4.3))(ws@8.21.1))(react@19.2.4)(svelte@5.56.8(@typescript-eslint/types@8.65.0))(vue@3.5.40(typescript@5.9.3))
       '@langchain/protocol': 0.0.18
       '@standard-schema/spec': 1.1.0
       zod: 4.4.3
@@ -23525,6 +23543,15 @@ snapshots:
     optionalDependencies:
       '@modelcontextprotocol/sdk': 1.30.0(@cfworker/json-schema@4.1.1)(zod@4.4.3)
 
+  '@openuidev/observability@0.0.1': {}
+
+  '@openuidev/react-headless@0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))':
+    dependencies:
+      '@ag-ui/core': 0.0.53
+      '@openuidev/observability': 0.0.1
+      react: 19.2.4
+      zustand: 4.5.7(@types/react@19.2.17)(react@19.2.4)
+
   '@openuidev/react-lang@0.1.5(@modelcontextprotocol/sdk@1.30.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(react@19.2.0)':
     dependencies:
       '@openuidev/lang-core': 0.1.2(@modelcontextprotocol/sdk@1.30.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))
@@ -23541,7 +23568,89 @@ snapshots:
     optionalDependencies:
       '@modelcontextprotocol/sdk': 1.30.0(@cfworker/json-schema@4.1.1)(zod@4.4.3)
 
+  '@openuidev/react-ui@0.13.3(@openuidev/react-headless@0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4)))(@openuidev/react-lang@packages+react-lang)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.4.3)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))':
+    dependencies:
+      '@floating-ui/react-dom': 2.1.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@openuidev/react-headless': 0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))
+      '@openuidev/react-lang': link:packages/react-lang
+      '@radix-ui/react-accordion': 1.2.20(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-aspect-ratio': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-checkbox': 1.3.11(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-dropdown-menu': 2.1.24(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-label': 2.1.15(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-radio-group': 1.4.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-select': 2.3.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-separator': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-slider': 1.4.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-slot': 1.3.3(@types/react@19.2.17)(react@19.2.4)
+      '@radix-ui/react-switch': 1.3.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-tabs': 1.1.21(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-toggle-group': 1.1.19(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-tooltip': 1.2.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      clsx: 2.1.1
+      date-fns: 4.4.0
+      lodash-es: 4.18.1
+      lucide-react: 0.562.0(react@19.2.4)
+      react: 19.2.4
+      react-day-picker: 9.14.0(react@19.2.4)
+      react-dom: 19.2.4(react@19.2.4)
+      react-markdown: 10.1.0(@types/react@19.2.17)(react@19.2.4)
+      react-syntax-highlighter: 16.1.1(react@19.2.4)
+      recharts: 2.15.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      rehype-katex: 7.0.1
+      remark-breaks: 4.0.0
+      remark-emoji: 5.0.2
+      remark-gfm: 4.0.1
+      remark-math: 6.0.0
+      tiny-invariant: 1.3.3
+      zod: 4.4.3
+      zustand: 4.5.7(@types/react@19.2.17)(react@19.2.4)
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+      - supports-color
+
   '@openuidev/thesys-server@0.1.3': {}
+
+  '@openuidev/thesys@0.3.1(@openuidev/lang-core@packages+lang-core)(@openuidev/react-headless@0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4)))(@openuidev/react-lang@packages+react-lang)(@openuidev/react-ui@0.13.3(@openuidev/react-headless@0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4)))(@openuidev/react-lang@packages+react-lang)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.4.3)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4)))(@radix-ui/react-tooltip@1.2.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(@tiptap/core@2.27.2(@tiptap/pm@2.27.2))(@tiptap/pm@2.27.2)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.4.3)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))':
+    dependencies:
+      '@floating-ui/react-dom': 2.1.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@openuidev/lang-core': link:packages/lang-core
+      '@openuidev/react-headless': 0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))
+      '@openuidev/react-lang': link:packages/react-lang
+      '@openuidev/react-ui': 0.13.3(@openuidev/react-headless@0.9.4(react@19.2.4)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4)))(@openuidev/react-lang@packages+react-lang)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.4.3)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))
+      '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@radix-ui/react-tooltip': 1.2.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@tanstack/react-table': 8.21.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@tiptap/extension-placeholder': 2.27.2(@tiptap/core@2.27.2(@tiptap/pm@2.27.2))(@tiptap/pm@2.27.2)
+      '@tiptap/react': 2.27.2(@tiptap/core@2.27.2(@tiptap/pm@2.27.2))(@tiptap/pm@2.27.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@tiptap/starter-kit': 2.27.2
+      clsx: 2.1.1
+      d3-scale: 4.0.2
+      d3-selection: 3.0.0
+      d3-shape: 3.2.0
+      katex: 0.16.44
+      lodash: 4.17.21
+      lucide-react: 0.562.0(react@19.2.4)
+      mdast-util-find-and-replace: 3.0.2
+      mermaid: 11.16.0
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+      rehype-katex: 7.0.1
+      remark-breaks: 4.0.0
+      remark-gfm: 4.0.1
+      remark-math: 6.0.0
+      tiny-invariant: 1.3.3
+      unist-util-visit: 5.1.0
+      zod: 4.4.3
+      zustand: 4.5.7(@types/react@19.2.17)(react@19.2.4)
+    transitivePeerDependencies:
+      - '@tiptap/core'
+      - '@tiptap/pm'
+      - '@types/react'
+      - '@types/react-dom'
+      - supports-color
 
   '@openuidev/thesys@0.3.1(@openuidev/lang-core@packages+lang-core)(@openuidev/react-headless@packages+react-headless)(@openuidev/react-lang@packages+react-lang)(@openuidev/react-ui@packages+react-ui)(@radix-ui/react-tooltip@1.2.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(@tiptap/core@2.27.2(@tiptap/pm@2.27.2))(@tiptap/pm@2.27.2)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(zod@4.4.3)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.3))':
     dependencies:
@@ -23575,45 +23684,6 @@ snapshots:
       unist-util-visit: 5.1.0
       zod: 4.4.3
       zustand: 4.5.7(@types/react@19.2.17)(react@19.2.3)
-    transitivePeerDependencies:
-      - '@tiptap/core'
-      - '@tiptap/pm'
-      - '@types/react'
-      - '@types/react-dom'
-      - supports-color
-
-  '@openuidev/thesys@0.3.1(@openuidev/lang-core@packages+lang-core)(@openuidev/react-headless@packages+react-headless)(@openuidev/react-lang@packages+react-lang)(@openuidev/react-ui@packages+react-ui)(@radix-ui/react-tooltip@1.2.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(@tiptap/core@2.27.2(@tiptap/pm@2.27.2))(@tiptap/pm@2.27.2)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.4.3)(zustand@4.5.7(@types/react@19.2.17)(react@19.2.4))':
-    dependencies:
-      '@floating-ui/react-dom': 2.1.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@openuidev/lang-core': link:packages/lang-core
-      '@openuidev/react-headless': link:packages/react-headless
-      '@openuidev/react-lang': link:packages/react-lang
-      '@openuidev/react-ui': link:packages/react-ui
-      '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@radix-ui/react-tooltip': 1.2.7(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@tanstack/react-table': 8.21.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@tiptap/extension-placeholder': 2.27.2(@tiptap/core@2.27.2(@tiptap/pm@2.27.2))(@tiptap/pm@2.27.2)
-      '@tiptap/react': 2.27.2(@tiptap/core@2.27.2(@tiptap/pm@2.27.2))(@tiptap/pm@2.27.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@tiptap/starter-kit': 2.27.2
-      clsx: 2.1.1
-      d3-scale: 4.0.2
-      d3-selection: 3.0.0
-      d3-shape: 3.2.0
-      katex: 0.16.44
-      lodash: 4.17.21
-      lucide-react: 0.562.0(react@19.2.4)
-      mdast-util-find-and-replace: 3.0.2
-      mermaid: 11.16.0
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
-      rehype-katex: 7.0.1
-      remark-breaks: 4.0.0
-      remark-gfm: 4.0.1
-      remark-math: 6.0.0
-      tiny-invariant: 1.3.3
-      unist-util-visit: 5.1.0
-      zod: 4.4.3
-      zustand: 4.5.7(@types/react@19.2.17)(react@19.2.4)
     transitivePeerDependencies:
       - '@tiptap/core'
       - '@tiptap/pm'
