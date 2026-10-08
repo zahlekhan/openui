@@ -15,8 +15,7 @@
     "format:check": "prettier --check .",
     "check:benchmark-agents": "node scripts/check-benchmark-agent-readability.mjs && node scripts/check-benchmark-answer-contracts.mjs",
     "check:benchmark-answer-contracts": "node scripts/check-benchmark-answer-contracts.mjs",
-    "audit:benchmark-publication": "node scripts/audit-benchmark-publication.mjs",
-    "test": "vitest run"
+    "audit:benchmark-publication": "node scripts/audit-benchmark-publication.mjs"
   },
   "dependencies": {
     "@openuidev/cli": "workspace:*",
@@ -65,7 +64,6 @@
     "eslint-config-next": "16.2.6",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
-    "@types/semver": "^7.7.1",
-    "vitest": "^4.0.18"
+    "@types/semver": "^7.7.1"
   }
 }

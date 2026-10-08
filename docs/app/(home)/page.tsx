@@ -1,4 +1,3 @@
-import { homeJsonLd } from "@/lib/agent-readiness/json-ld";
 import type { Metadata } from "next";
 import { AGENT_SETUP_PROMPT, AgentPicker } from "./components/AgentPicker/AgentPicker";
 import styles from "./page.module.css";
@@ -24,11 +23,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className={styles.page}>
-      <script
-        type="application/ld+json"
-        // Escape "<" so no string in the data can close the script element.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd()).replace(/</g, "\\u003c") }}
-      />
       <div className={styles.heroShell}>
         <HeroSection
           align="left"

@@ -30,7 +30,7 @@ export async function GET() {
     "- Scaffolding a chat or agent app: run `npx @openuidev/cli create`.",
     "- Debugging malformed model output: paste it into the Debug page at /debug.",
     "",
-    "Do not use OpenUI for static pages, plain-text chat, or non-React renderers that have no community integration yet (check /integrations first).",
+    "OpenUI is not needed for static pages or plain-text chat, where no UI is generated at runtime.",
     "",
     "## Project",
     "",
