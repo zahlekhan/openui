@@ -1,6 +1,6 @@
+import { homeJsonLd } from "@/lib/agent-readiness/json-ld";
 import type { Metadata } from "next";
 import { AGENT_SETUP_PROMPT, AgentPicker } from "./components/AgentPicker/AgentPicker";
-import { homeJsonLd } from "@/lib/agent-readiness/json-ld";
 import styles from "./page.module.css";
 import { CloudBanner } from "./sections/CloudBanner/CloudBanner";
 import { CloudSection } from "./sections/CloudSection/CloudSection";

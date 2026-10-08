@@ -97,14 +97,6 @@ function SocialIcon({ link }: { link: SocialLink }) {
   );
 }
 
-function LegalLinks() {
-  return (
-    <span>
-      <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
-    </span>
-  );
-}
-
 function SocialIcons() {
   return (
     <div className={styles.socialIcons}>
@@ -198,9 +190,7 @@ export function Footer() {
           {/* Bottom bar */}
           <div className={styles.bottomBar}>
             <div className={styles.desktopBottomBar}>
-              <p className={styles.desktopMetaLeft}>
-                355 Bryant St, San Francisco, CA 94107 · <LegalLinks />
-              </p>
+              <p className={styles.desktopMetaLeft}>355 Bryant St, San Francisco, CA 94107</p>
               <SocialIcons />
               <p className={styles.desktopMetaRight}>
                 © {new Date().getFullYear()} Thesys Inc. All Rights Reserved
@@ -214,9 +204,6 @@ export function Footer() {
                   © {new Date().getFullYear()} Thesys Inc. All Rights Reserved
                 </p>
                 <p className={styles.mobileMetaText}>355 Bryant St, San Francisco, CA 94107</p>
-                <p className={styles.mobileMetaText}>
-                  <LegalLinks />
-                </p>
               </div>
             </div>
           </div>

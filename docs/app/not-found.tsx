@@ -7,11 +7,8 @@ const LINKS = [
   ["/docs/overview", "Documentation"],
   ["/llms.txt", "llms.txt — index of every docs page"],
   ["/sitemap.xml", "Sitemap"],
-  ["/openapi.json", "OpenAPI description of the site's API"],
   ["/blog", "Blog"],
   ["/benchmarks", "Benchmarks"],
-  ["/about", "About"],
-  ["/contact", "Contact"],
 ] as const;
 
 export default function NotFound() {

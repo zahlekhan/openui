@@ -1,8 +1,8 @@
 import { GITHUB_URL, ORGANIZATION, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "./site";
 
 /* Homepage identity as schema.org JSON-LD: the product (SoftwareApplication)
-   and the company behind it (Organization). contactPoint points at the public
-   contact page by URL; no mailbox is published on the site, so none is claimed. */
+   and the company behind it (Organization). contactPoint points at GitHub
+   issues; no mailbox is published on the site, so none is claimed. */
 export function homeJsonLd() {
   const organization = {
     "@type": "Organization",
@@ -15,7 +15,7 @@ export function homeJsonLd() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
-      url: `${SITE_URL}/contact`,
+      url: `${GITHUB_URL}/issues`,
       availableLanguage: "English",
     },
   };

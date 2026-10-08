@@ -8,7 +8,7 @@ function notFound(): Response {
     404,
     "not_found",
     "No API endpoint exists at this path.",
-    "See /openapi.json for the list of endpoints, or /llms.txt for the documentation index.",
+    "See /llms.txt for the documentation index.",
   );
 }
 

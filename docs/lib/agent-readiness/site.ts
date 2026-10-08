@@ -1,5 +1,5 @@
 /* Facts about the site that several machine-readable surfaces repeat
-   (llms.txt, JSON-LD, OpenAPI, MCP card). Kept in one place so they cannot
+   (JSON-LD, the Markdown homepage). Kept in one place so they cannot
    drift apart. Everything here is already public on the site or in the repo. */
 
 export const SITE_URL = "https://www.openui.com";
