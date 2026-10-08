@@ -1,3 +1,4 @@
+import { apiError } from "@/lib/agent-readiness/api-error";
 import { hasAllowedOrigin, hasJsonContentType } from "@/lib/openui-cloud/request";
 import { addToWaitlist } from "@/lib/waitlist/store";
 
@@ -23,23 +24,57 @@ function json(body: unknown, status: number): Response {
 const EMAIL = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
 
 export async function POST(request: Request): Promise<Response> {
-  if (!hasAllowedOrigin(request)) return json({ error: "Forbidden" }, 403);
-  if (!hasJsonContentType(request)) return json({ error: "Expected application/json" }, 415);
+  if (!hasAllowedOrigin(request))
+    return apiError(
+      403,
+      "origin_not_allowed",
+      "Forbidden",
+      "Submit this form from https://www.openui.com; cross-origin requests are rejected.",
+    );
+  if (!hasJsonContentType(request))
+    return apiError(
+      415,
+      "unsupported_media_type",
+      "Expected application/json",
+      "Send a JSON body with the header Content-Type: application/json.",
+    );
 
   const declaredLength = Number(request.headers.get("content-length") ?? 0);
-  if (declaredLength > MAX_BODY_BYTES) return json({ error: "Body too large" }, 413);
+  if (declaredLength > MAX_BODY_BYTES)
+    return apiError(
+      413,
+      "body_too_large",
+      "Body too large",
+      'Send only {"email": "you@example.com"}.',
+    );
 
   let payload: { email?: unknown };
   try {
     payload = (await request.json()) as { email?: unknown };
   } catch {
-    return json({ error: "Malformed JSON" }, 400);
+    return apiError(
+      400,
+      "malformed_json",
+      "Malformed JSON",
+      'Send a valid JSON object such as {"email": "you@example.com"}.',
+    );
   }
 
-  if (typeof payload?.email !== "string") return json({ error: "Email is required" }, 400);
+  if (typeof payload?.email !== "string")
+    return apiError(
+      400,
+      "email_required",
+      "Email is required",
+      "Include a string field named email.",
+    );
   const email = payload.email.trim().toLowerCase();
   if (email.length > MAX_EMAIL_LENGTH || !EMAIL.test(email)) {
-    return json({ error: "Enter a valid email address." }, 400);
+    return apiError(
+      400,
+      "invalid_email",
+      "Enter a valid email address.",
+      "Use the form name@example.com, at most 254 characters.",
+    );
   }
 
   const result = await addToWaitlist(email, request.signal);
@@ -53,5 +88,10 @@ export async function POST(request: Request): Promise<Response> {
       "[waitlist] TALLY_FORM_ID / TALLY_EMAIL_FIELD are not set; the signup was not stored.",
     );
   }
-  return json({ error: "Could not save that right now. Please try again." }, 503);
+  return apiError(
+    503,
+    "waitlist_unavailable",
+    "Could not save that right now. Please try again.",
+    "Retry in a few minutes.",
+  );
 }

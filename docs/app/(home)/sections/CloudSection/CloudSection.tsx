@@ -41,9 +41,9 @@ export function CloudSection() {
                 tag="Observability"
                 className={styles.observabilityEyebrow}
               />
-              <h3 className={styles.observabilityTitle}>
+              <h2 className={styles.observabilityTitle}>
                 Understand how users experience your agent
-              </h3>
+              </h2>
               <BevelButton
                 className={styles.observabilityCta}
                 variant="dark"

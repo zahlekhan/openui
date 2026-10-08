@@ -98,7 +98,7 @@ export function ProductSection({
       <div className={styles.lockup}>
         <div className={styles.lead}>
           <ProductLabel name={name} tag={tag} />
-          <h3 className={styles.headline}>{headline}</h3>
+          <h2 className={styles.headline}>{headline}</h2>
           <div className={styles.ctas}>
             {primaryCta && (
               <BevelButton
@@ -178,7 +178,7 @@ export function ProductSection({
               <span className={styles.cardIcon} aria-hidden="true">
                 <CardIcon size={20} weight="light" />
               </span>
-              <h4 className={styles.cardTitle}>{title}</h4>
+              <h3 className={styles.cardTitle}>{title}</h3>
               <p className={styles.cardDescription}>{cardCopy}</p>
             </div>
           ))}
